@@ -12,7 +12,7 @@ func main() {
 	fmt.Println("The answer is:", result)
 }
 
-func compute(in string) int {
+func compute(in string) float64 {
 	expr := sanitize(in)
 	tree := expression.Parse(expr)
 	return tree.Resolve()

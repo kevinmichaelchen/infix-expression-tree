@@ -21,9 +21,9 @@ func (e Tree) getOperator() string {
 	return e.Value
 }
 
-func (e Tree) Resolve() int {
+func (e Tree) Resolve() float64 {
 	if !e.isOperator() {
-		i, err := strconv.Atoi(e.Value)
+		i, err := strconv.ParseFloat(e.Value, 64)
 		if err != nil {
 			panic(fmt.Errorf("invalid operand: %s", e.Value))
 		}
@@ -37,7 +37,7 @@ func (e Tree) Resolve() int {
 	return solve(e.Value, e.Left.Resolve(), e.Right.Resolve())
 }
 
-func solve(operatorStr string, left, right int) int {
+func solve(operatorStr string, left, right float64) float64 {
 	switch operatorStr {
 	case "+":
 		return left + right
