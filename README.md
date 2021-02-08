@@ -2,9 +2,16 @@
 
 [![Run on Repl.it](https://repl.it/badge/github/kevinmichaelchen/infix-expression-tree)](https://repl.it/github/kevinmichaelchen/infix-expression-tree)
 
-This program accepts an infix algebraic formula, parses it,
-constructs a representative binary expression tree,
-and computes the result of the formula.
+## The Problem
+Write a program that accepts an infix algebraic formula, such as:
+```
+3 + 2 * 4
+```
+and outputs the answer: `11`.
+
+## The Solution
+The solution involves scanning the string into a binary expression tree,
+and then recursively solving the tree.
 
 ## Jargon
 ### Trees
