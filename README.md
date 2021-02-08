@@ -1,5 +1,7 @@
 # infix-expression-tree
 
+[![Run on Repl.it](https://repl.it/badge/github/kevinmichaelchen/infix-expression-tree)](https://repl.it/github/kevinmichaelchen/infix-expression-tree)
+
 This program accepts an infix algebraic formula, parses it,
 constructs a representative binary expression tree,
 and computes the result of the formula.
