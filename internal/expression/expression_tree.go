@@ -6,9 +6,10 @@ import (
 )
 
 type Tree struct {
-	Value  string
-	Left   *Tree
-	Right  *Tree
+	Value string
+	Left  *Tree
+	Right *Tree
+	// TODO probably unnecessary to have this field
 	Parent *Tree
 }
 
