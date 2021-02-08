@@ -24,9 +24,19 @@ Nodes with one child represent a unary operator.
 Infix notation is used for arithmetical formulae and occurs when the operator appears 
 between the operands.
 
+### Commutativity
+In mathematics, a binary operation is commutative if changing the order of the operands 
+does not change the result.
+```
+a + b = b + a
+```
+
 ### Associativity
 In mathematics, the associative property is a property of some binary operations, 
 which means that rearranging the parentheses in an expression will not change the result.
+```
+(a + b) + c = a + (b + c)
+```
 
 ## Challenges
 ### Formula Normalization (Parens Injection)
@@ -66,8 +76,13 @@ followed by another pass for multiplicative ops, followed by another for additiv
 which will inform the height of the expression tree.~~
 
 Take the following generalized formula:
-a + b * c * d ^ e + f ^ g * h
+a + b * (c + d) ^ e + f ^ g * h
 
+Can we impose a grammar on such formulae?
+In linear time, this can be "tokenized" into these types of tokens/units:
+```
+left-paren | right-paren | number | operator | binary-operation
+```
 
 ## Other considerations
 - Unary operations (e.g., ones' complement)
